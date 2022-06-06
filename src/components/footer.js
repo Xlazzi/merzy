@@ -11,7 +11,7 @@ import {
   CardSubtitle } from 'reactstrap'; 
   
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faTiktok, faYoutube } from "@fortawesome/free-brands-svg-icons"
+import { faFacebook, faInstagram, faTiktok, faYoutube} from "@fortawesome/free-brands-svg-icons"
 
 export default function Footer() {
   return (
@@ -78,6 +78,13 @@ export default function Footer() {
               <CardText >
               Mỗi tháng chúng tôi đều có những đợt giảm giá dịch vụ và sản phẩm nhằm chi ân khách hàng. Để có thể cập nhật kịp thời những đợt giảm giá này, vui lòng nhập địa chỉ email của bạn vào ô dưới đây.
               </CardText>
+			      	<div class="input-group">
+                <input id="searchtext" maxlength="40" class="form-control input-search" type="text" size="20" placeholder="Nhập địa chỉ Email của bạn..."/>
+                {/* <span class="input-group-btn">
+                  <button style={{maxHeight:40}} type="submit" id="searchsubmit">
+                    <FontAwesomeIcon icon="fa-solid fa-paper-plane" style={{width:40}} /></button>
+                </span> */}
+              </div>
               </CardBody>
             </Card>
           </CardGroup>

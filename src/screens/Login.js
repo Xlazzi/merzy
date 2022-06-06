@@ -50,7 +50,7 @@ const App=()=> {
               <div className='header-right-run'> <Link className='/bestseller' to={"/bestseller"} href="#"> Best Seller </Link> </div>
               </NavItem>
               <NavItem>
-                <div className='header-right-run'> <NavLink href="#"> New </NavLink> </div>
+              <div className='header-right-run'> <Link className='/new' to={"/new"}  href="#"> New </Link> </div>
               </NavItem>
               <Dropdown nav toggle>
                 <div className='header-right-run'> <DropdownToggle caret nav > Lip </DropdownToggle></div>

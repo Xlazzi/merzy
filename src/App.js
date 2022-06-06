@@ -16,6 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Home from './screens/Home'
 import Login from './screens/Login'
 import BestSeller from './screens/BestSeller';
+import New from './screens/New';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/user" element={<Login />} />
       <Route path='/bestseller' element={<BestSeller/>}></Route>
+      <Route path='/new' element={<New/>}></Route>
     </Routes>
   </BrowserRouter>
   )

@@ -25,7 +25,7 @@ export default function BestSeller() {
                             <div className='content-small'>
                                 <a>Trang chủ</a>
                                 <span> / </span>
-                                <span>Best Seller</span>
+                                <span>New</span>
                             </div>
                         </div>
                       </div>
@@ -45,7 +45,7 @@ export default function BestSeller() {
               <div className='header-right-run'> <Link className='/bestseller' to={"/bestseller"} href="#"> Best Seller </Link> </div>
               </NavItem>
               <NavItem>
-              <div className='header-right-run'> <Link className='/new' to={"/new"}  href="#"> New </Link> </div>
+                <div className='header-right-run'> <Link className='/new' to={"/new"}  href="#"> New </Link> </div>
               </NavItem>
               <Dropdown nav toggle>
                 <div className='header-right-run'> <DropdownToggle caret nav > Lip </DropdownToggle></div>
@@ -77,7 +77,7 @@ export default function BestSeller() {
       <div className='wrapper-body'>
         <div className='inner-body'>
         <div className='best-seller'>
-            <h2 className='best-seller-text' > Best Seller</h2>
+            <h2 className='best-seller-text' > New</h2>
         </div>
         <div className='form-horizontal '>
           <label style={{paddingRight:2}}>Sắp xếp </label>
@@ -95,6 +95,15 @@ export default function BestSeller() {
       </div>
         <div className='body-product'>
           <div className='product-list'>
+            <div className='product-item'>
+            <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m6.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
+            <div className='product-desc'>1 phiên bản màu sắc</div>
+            <p className='product-text'>Son Kem Lì Merzy Bite The Beat Mellow Tint #M6</p>
+            <p className='price'>
+              <span className="new-price">149.000VND</span>
+              <del className="old-price">249.000VND</del>
+            </p>
+            </div>  
             <div className='product-item'>
               <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m2.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
               <div className='product-desc'>1 phiên bản màu sắc</div>
@@ -122,15 +131,6 @@ export default function BestSeller() {
               <del className="old-price">299.000VND</del>
             </p>
             </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m6.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Kem Lì Merzy Bite The Beat Mellow Tint #M6</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price">249.000VND</del>
-            </p>
-            </div>  
           </div>
           <div className='product-list'>
             <div className='product-item'>
