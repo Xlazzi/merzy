@@ -5,13 +5,6 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { Nav } from 'reactstrap';
-import { NavItem } from 'reactstrap';
-import { NavLink } from 'reactstrap';
-import { Dropdown } from 'reactstrap';
-import { DropdownToggle } from 'reactstrap';
-import { Button } from 'reactstrap';
-import { UncontrolledTooltip } from 'reactstrap'; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Home from './screens/Home'
 import Login from './screens/Login'

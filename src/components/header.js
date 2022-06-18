@@ -7,56 +7,26 @@ import { Nav,
         Dropdown,
         DropdownToggle,
         Button,
-        ButtonGroup,
-        UncontrolledTooltip,
-        Carousel,
-        CarouselIndicators,
-        CarouselItem,
-        CarouselCaption,
-        CarouselControl } from 'reactstrap'; 
+        UncontrolledTooltip} from 'reactstrap'; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-
+import { Carousel } from "react-bootstrap";
 export default function Header() {
   return (
     <div>
       <div className='header'>
       <div className='under-header' style={{height:721}}>
-        {/* <img src={`${require("../assets/image/poster2.jpg")}`} alt={'poster2'} className='poster'style={{height:721}} /> */}
-      <Carousel activeIndex={0} next={function noRefCheck(){}} previous={function noRefCheck(){}}>
-        <CarouselIndicators activeIndex={0} items={[
-          {
-            altText: 'Slide 1',
-            caption: 'Slide 1',
-            key: 1,
-            src: 'https://picsum.photos/id/123/1200/600'
-          },
-          {
-            altText: 'Slide 2',
-            caption: 'Slide 2',
-            key: 2,
-            src: 'https://picsum.photos/id/456/1200/600'
-          },
-          {
-            altText: 'Slide 3',
-            caption: 'Slide 3',
-            key: 3,
-            src: 'https://picsum.photos/id/678/1200/600'
-          }
-        ]}
-          onClickHandler={function noRefCheck(){}} />
-        <CarouselItem onExited={function noRefCheck(){}}  onExiting={function noRefCheck(){}} >
-          <img alt="Slide 1" src="https://picsum.photos/id/123/1200/600"/>
-        <CarouselCaption captionHeader="Slide 1"captionText="Slide 1" /> </CarouselItem>
-        <CarouselItem onExited={function noRefCheck(){}} onExiting={function noRefCheck(){}} >
-          <img alt="Slide 2"src="https://picsum.photos/id/456/1200/600"/>
-        <CarouselCaption captionHeader="Slide 2" captionText="Slide 2" /> </CarouselItem>
-        <CarouselItem onExited={function noRefCheck(){}}  onExiting={function noRefCheck(){}} >
-         <img alt="Slide 3" src="https://picsum.photos/id/678/1200/600"  />
-        <CarouselCaption captionHeader="Slide 3"captionText="Slide 3"/></CarouselItem>
-        <CarouselControl direction="prev"directionText="Previous"onClickHandler={function noRefCheck(){}}/>
-        <CarouselControl direction="next"directionText="Next"onClickHandler={function noRefCheck(){}}/> 
-      </Carousel>
+       <Carousel>
+      <Carousel.Item>
+        <img src={`${require("../assets/image/poster1.jpg")}`} alt={'poster1'} className='poster'style={{height:721}} />
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src={`${require("../assets/image/poster2.jpg")}`} alt={'poster2'} className='poster'style={{height:721}} />
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src={`${require("../assets/image/poster3.jpg")}`} alt={'poster3'} className='poster'style={{height:721}} />
+      </Carousel.Item>
+    </Carousel>
         </div>
         <div className='header-slider'>
         <div className='header-left'>
