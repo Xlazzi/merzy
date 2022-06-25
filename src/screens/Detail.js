@@ -81,23 +81,103 @@ export default function Detail() {
              <div className='pro-content-head'> 
                 <h1>Son Kem Lì Merzy Bite The Beat Mellow Tint #M2</h1>
              </div>
-             <div>
-             <div className='pro-brand'>
-                <span className='title'>Thương hiệu: </span>
-                <a href='#'>Merzy</a>
+            {/* pro-text */}
+             <div className='pro-text'>
+              <div className='pro-brand'>
+                  <span className='title'>Thương hiệu: </span>
+                  <a href='#'>Merzy</a>
+              </div>
+              <span style={{marginLeft:5, marginRight:5}} >|</span>
+              <div className='pro-type'>
+                  <span className='title'>Loại: </span>
+                  <a href='#'>Lip</a>
+              </div>
+              <span style={{marginLeft:5, marginRight:5}} >|</span>
+              <div className='pro-sku'>
+                <span className='title'>Mã SP: </span>
+                <span>8809510682681</span>
+                </div>
              </div>
-             <span style={{marginLeft:5, marginRight:5}} >|</span>
-             <div className='pro-type'>
-                <span className='title'>Loại: </span>
-                <a href='#'>Lip</a>
+             {/* pro price */}
+             <div className='pro-price'>
+              <span className="current-price">149,000₫</span>
+              <span className="original-price"><s>299,000₫</s></span>
+              <div className='sale-percentage'>
+                <span class="PriceSaving">(Bạn đã tiết kiệm được 150,000₫)</span>
+              </div>
              </div>
-             <span style={{marginLeft:5, marginRight:5}} >|</span>
-             <div className='pro-sku'>
-              <span className='title'>Mã SP: </span>
-              <span>8809510682681</span>
-             </div></div>
+             <div class="pro-short-desc">
+								<p><strong>•&nbsp;</strong>Trọng lượng: 4g</p>
+                <p><strong>•&nbsp;</strong>Đặc trưng:</p>
+                <p>- Son kem&nbsp;Merzy Bite The Beat Mellow Tint thiết kế vỏ son có màu sắc đặc trưng được thể hiện giống với màu son bên trong.</p>
+                <p>- Khả năng lên màu cực kỳ chuẩn, bền màu, không lem trôi.</p>
+                <p>- Độ bám màu tương đối, giữ màu trong thời gian dài.</p>
+							</div>
+              <div className='qty-addcart'> 
+                <span className='number-qty'>Số lượng </span>
+                <div className='js-qty'>
+                  <button type="button" >
+                    <span class="fallback-text">−</span>
+                  </button>
+                  <input class="input-quantity" value="1"></input>
+                  <button type="button" >
+                    <span class="fallback-text">+</span>
+                  </button>
+                </div>
+              </div>
+              <div className='product-actions'>
+              <button type="button"  className="btnAddToCart">
+                <span id="AddToCartText">Thêm vào giỏ</span>
+              </button>
+              <button type="button" className="btnBuyNow">Mua ngay</button>
+              </div>
           </div>
         </div>  
+        {/* product desc */}
+        <div className='grid'>
+            <div className="product-description">
+              <div className='tab'>
+                <button className="pro-tablinks">Mô tả sản phẩm</button>
+              </div>
+              <div className='pro-item'>
+                <div className='pro-tabcontent'>
+                  <p  style={{marginLeft:30}} >
+                    <img src={`${require("../assets/image/product-desc/mellow_1.jpg")}`}/>
+                    </p>
+                </div>
+                <div className='pro-tabcontent'>
+                  <p  style={{marginLeft:30}} >
+                    <img src={`${require("../assets/image/product-desc/mellow_2.jpg")}`}/>
+                    </p>
+                </div>
+                <div className='pro-tabcontent'>
+                  <p  style={{marginLeft:30}} >
+                    <img src={`${require("../assets/image/product-desc/mellow_3.jpg")}`}/>
+                    </p>
+                </div>
+                <div className='pro-tabcontent'>
+                  <p  style={{marginLeft:30}} >
+                    <img src={`${require("../assets/image/product-desc/mellow_4.jpg")}`}/>
+                    </p>
+                </div>
+                <div className='pro-tabcontent'>
+                  <p  style={{marginLeft:30}} >
+                    <img src={`${require("../assets/image/product-desc/mellow_5.jpg")}`}/>
+                    </p>
+                </div>
+                <div className='pro-tabcontent'>
+                  <p  style={{marginLeft:30}} >
+                    <img src={`${require("../assets/image/product-desc/mellow_6.jpg")}`}/>
+                    </p>
+                </div>
+                <div className='pro-tabcontent'>
+                  <p  style={{marginLeft:30}} >
+                    <img src={`${require("../assets/image/product-desc/mellow_7.jpg")}`}/>
+                    </p>
+                </div>
+              </div>
+            </div>
+        </div>
       {/* footer */}
       <div> 
             <Footer/>

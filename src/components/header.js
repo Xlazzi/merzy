@@ -71,8 +71,7 @@ export default function Header() {
                 <div className='header-right-run'> <DropdownToggle caret nav > Face </DropdownToggle></div>
               </Dropdown>
               <NavItem>
-                {/* <div className='header-right-run'> <NavLink href="#"> Blogs </NavLink></div> */}
-                <div className='header-right-run'> <Link className='/bestseller' to={"/detail"} href="#"> Detail </Link> </div>
+                <div className='header-right-run'> <NavLink href="#"> Blogs </NavLink></div>
               </NavItem>
               <NavItem>
                <div className='header-right-run'> <NavLink href="#"> Tìm kiếm </NavLink></div>
