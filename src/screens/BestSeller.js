@@ -7,9 +7,20 @@ import { Nav,
     Dropdown,
     DropdownToggle} from 'reactstrap';
 import { Link } from "react-router-dom";
-import React from 'react'
+import axios from 'axios';
+import { url_api } from '../assets/api';
+import React, {useEffect, useState} from 'react'
 
 export default function BestSeller() {
+  const[data,setData]= useState([]);
+  useEffect(() => {
+    axios.get(`${url_api}/BestSeller`)
+    .then(res => {
+      setData(res.data);
+      console.log(res.data);
+    })
+    .catch(error => console.log(error));
+  },[]);
   return (
     <div className='BestSeller'> 
         <div className='header1'>
@@ -94,83 +105,19 @@ export default function BestSeller() {
         </div>
       </div>
         <div className='body-product'>
+            {data?.map((item, i) => ( 
           <div className='product-list'>
             <div className='product-item'>
-              <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m2.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
-              <div className='product-desc'>1 phiên bản màu sắc</div>
-              <p className='product-text'>Son Kem Lì Merzy Bite The Beat Mellow Tint #M2</p>
+              <img src={item?.link} top width="100%" />   
+              <div className='product-desc'>{item.desc}</div>
+              <p className='product-text'>{item.title}</p>
               <p className='price'>
-                <span className="new-price">149.000VND</span>
-                <del className="old-price">249.000VND</del>
-              </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V16.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  top width="100%" />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>(Ver Red) Son Kem Lì Merzy The First Velvet Tint #V16</p>
-            <p className='price'>
-              <span className="new-price">139.000VND</span>
-              <del className="old-price">249.000VND</del>
-            </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt11.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  top width="100%" />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Tint Bóng Merzy Aurora Dewy Tint #DT11</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price">299.000VND</del>
-            </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m6.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  top width="100%" />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Kem Lì Merzy Bite The Beat Mellow Tint #M6</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price">249.000VND</del>
-            </p>
-            </div>  
+                <span className="new-price">{item.newPrice}</span>
+                <del className="old-price">{item.oldPrice}</del>
+              </p> 
+              </div>
           </div>
-          <div className='product-list'>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V17.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  style={{height:250}} />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>(Ver Red) Son Kem Lì Merzy The First Velvet Tint #V17</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price">249.000VND</del>
-            </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt10.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  style={{height:250}} />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Tint Bóng Merzy Aurora Dewy Tint #DT10</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price" >249.000VND</del>
-            </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt4.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  style={{height:250}} />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Tint Bóng Merzy Aurora Dewy Tint #DT4</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price">299.000VND</del>
-            </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m1.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  style={{height:250}} />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Kem Lì Merzy Bite The Beat Mellow Tint #M1</p>
-            <p classNameName='price'>
-              <span className="new-price">129.000VND</span>
-              <del className="old-price">249.000VND</del>
-            </p>
-             </div>  
-             
-             </div>
+              ))}
             </div>
           </div>
         </div>
