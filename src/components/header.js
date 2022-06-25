@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import logo from '../logo.svg';
 import '../assets/css/App.scss';
 import { Nav,
@@ -11,28 +11,46 @@ import { Nav,
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
+import axios from 'axios';
+import { url_api } from '../assets/api';
 export default function Header() {
+  const[data,setData]= useState([]);
+  const[navbar,setNavbar]=useState(false);
+  useEffect(() => {
+    axios.get(`${url_api}/header`)
+    .then(res => {
+      setData(res.data);
+      console.log(res.data);
+    })
+    .catch(error => console.log(error));
+  },[]);
+  const changBackground=()=>{
+    if(window.scrollY>=80){
+      setNavbar(true);
+    }
+    else{
+      setNavbar(false);
+    }
+  }
+  window.addEventListener('scroll',changBackground);
   return (
     <div>
       <div className='header'>
       <div className='under-header' style={{height:721}}>
-       <Carousel>
-      <Carousel.Item>
-        <img src={`${require("../assets/image/poster1.jpg")}`} alt={'poster1'} className='poster'style={{height:721}} />
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={`${require("../assets/image/poster2.jpg")}`} alt={'poster2'} className='poster'style={{height:721}} />
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={`${require("../assets/image/poster3.jpg")}`} alt={'poster3'} className='poster'style={{height:721}} />
-      </Carousel.Item>
+       <Carousel controls={false}>
+        {data?.map((item, i) => (
+          <Carousel.Item>
+          <img src={item?.link} alt={item?.title} className='poster'style={{height:721}} />
+         </Carousel.Item>
+        ))}
+    
     </Carousel>
         </div>
-        <div className='header-slider'>
+        <div className={navbar ? 'header-slider active':'header-slider'}>
         <div className='header-left'>
           <img src={`${require("../assets/image/logo.jpg")}`} alt={'logo'} className='logo' />
         </div>
-        <div id='header' className='header-right srcolldown '> 
+        <div id='header' className='header-right'> 
             <Nav pills>
             {/* <NavItem>
                 <div className='header-right-run'> <Link to={"/"}> Trang chủ </Link> </div>
@@ -53,7 +71,8 @@ export default function Header() {
                 <div className='header-right-run'> <DropdownToggle caret nav > Face </DropdownToggle></div>
               </Dropdown>
               <NavItem>
-                <div className='header-right-run'> <NavLink href="#"> Blogs </NavLink></div>
+                {/* <div className='header-right-run'> <NavLink href="#"> Blogs </NavLink></div> */}
+                <div className='header-right-run'> <Link className='/bestseller' to={"/detail"} href="#"> Detail </Link> </div>
               </NavItem>
               <NavItem>
                <div className='header-right-run'> <NavLink href="#"> Tìm kiếm </NavLink></div>
@@ -90,15 +109,3 @@ export default function Header() {
     </div>
   )
 }
-{/* <script>
-  window.onscroll = changPos;
-  function changPos () {
-    var header = $("$header");
-    var headerheight = $("$header").height();
-    if(window.pageYOffset > headerheight){ 
-      header.addClassName("srcolldown");
-    }else{
-      header.removeaddClassName("srcolldown");
-         }
-      }
-</script>  */}

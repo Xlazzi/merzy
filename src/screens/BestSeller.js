@@ -105,7 +105,7 @@ export default function BestSeller() {
               </p>
             </div>
             <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V16.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
+            <img src={`${require("../assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V16.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  top width="100%" />
             <div className='product-desc'>1 phiên bản màu sắc</div>
             <p className='product-text'>(Ver Red) Son Kem Lì Merzy The First Velvet Tint #V16</p>
             <p className='price'>
@@ -114,7 +114,7 @@ export default function BestSeller() {
             </p>
             </div>
             <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt11.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
+            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt11.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  top width="100%" />
             <div className='product-desc'>1 phiên bản màu sắc</div>
             <p className='product-text'>Son Tint Bóng Merzy Aurora Dewy Tint #DT11</p>
             <p className='price'>
@@ -123,7 +123,7 @@ export default function BestSeller() {
             </p>
             </div>
             <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m6.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
+            <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m6.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  top width="100%" />
             <div className='product-desc'>1 phiên bản màu sắc</div>
             <p className='product-text'>Son Kem Lì Merzy Bite The Beat Mellow Tint #M6</p>
             <p className='price'>
@@ -134,7 +134,7 @@ export default function BestSeller() {
           </div>
           <div className='product-list'>
             <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V17.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' style={{height:250}} />
+            <img src={`${require("../assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V17.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  style={{height:250}} />
             <div className='product-desc'>1 phiên bản màu sắc</div>
             <p className='product-text'>(Ver Red) Son Kem Lì Merzy The First Velvet Tint #V17</p>
             <p className='price'>
@@ -143,7 +143,7 @@ export default function BestSeller() {
             </p>
             </div>
             <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt10.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' style={{height:250}} />
+            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt10.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  style={{height:250}} />
             <div className='product-desc'>1 phiên bản màu sắc</div>
             <p className='product-text'>Son Tint Bóng Merzy Aurora Dewy Tint #DT10</p>
             <p className='price'>
@@ -152,7 +152,7 @@ export default function BestSeller() {
             </p>
             </div>
             <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt4.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} classNameName='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' style={{height:250}} />
+            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt4.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  style={{height:250}} />
             <div className='product-desc'>1 phiên bản màu sắc</div>
             <p className='product-text'>Son Tint Bóng Merzy Aurora Dewy Tint #DT4</p>
             <p className='price'>
@@ -161,7 +161,7 @@ export default function BestSeller() {
             </p>
             </div>
             <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m1.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} classNameName='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' style={{height:250}} />
+            <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m1.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}  style={{height:250}} />
             <div className='product-desc'>1 phiên bản màu sắc</div>
             <p className='product-text'>Son Kem Lì Merzy Bite The Beat Mellow Tint #M1</p>
             <p classNameName='price'>
