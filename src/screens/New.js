@@ -7,9 +7,30 @@ import { Nav,
     Dropdown,
     DropdownToggle} from 'reactstrap';
 import { Link } from "react-router-dom";
-import React from 'react'
+import axios from 'axios';
+import { url_api } from '../assets/api';
+import React, {useEffect, useState} from 'react'
 
 export default function BestSeller() {
+  const[data,setData]= useState([]);
+  useEffect(() => {
+    axios.get(`${url_api}/BestSeller`)
+    .then(res => {
+      setData(res.data);
+      console.log(res.data);
+    })
+    .catch(error => console.log(error));
+  },[]);
+  const[navbar,setNavbar]=useState(false);
+  const changBackground=()=>{
+    if(window.scrollY>=80){
+      setNavbar(true);
+    }
+    else{
+      setNavbar(false);
+    }
+  }
+  window.addEventListener('scroll',changBackground);
   return (
     <div className='BestSeller'> 
         <div className='header1'>
@@ -20,7 +41,7 @@ export default function BestSeller() {
                     <div className='inner text-center'>
                         <div className='content'>
                             <div className='content-big'>
-                                <h3>Best Seller</h3>
+                                <h3>New</h3>
                             </div>
                             <div className='content-small'>
                                 <a>Trang chủ</a>
@@ -32,20 +53,21 @@ export default function BestSeller() {
                   </div>
               </div>
             </div>
-        <div className='header-slider'>
+          <div className={navbar ? 'header-slider active':'header-slider'}>
+        {/* <div className='header-slider'> */}
           <div className='header-left'>
             <img src={`${require("../assets/image/logo.jpg")}`} alt={'logo'} className='logo' />
           </div>
-        <div id='header' className='header-right srcolldown '> 
+        <div id='header' className='header-right '> 
             <Nav pills>
-            {/* <NavItem>
+            <NavItem>
                 <div className='header-right-run'> <Link to={"/"}> Trang chủ </Link> </div>
-              </NavItem> */}
+              </NavItem>
               <NavItem>
               <div className='header-right-run'> <Link className='/bestseller' to={"/bestseller"} href="#"> Best Seller </Link> </div>
               </NavItem>
               <NavItem>
-                <div className='header-right-run'> <Link className='/new' to={"/new"}  href="#"> New </Link> </div>
+              <div className='header-right-run'> <Link className='/new' to={"/new"}  href="#"> New </Link> </div>
               </NavItem>
               <Dropdown nav toggle>
                 <div className='header-right-run'> <DropdownToggle caret nav > Lip </DropdownToggle></div>
@@ -77,7 +99,7 @@ export default function BestSeller() {
       <div className='wrapper-body'>
         <div className='inner-body'>
         <div className='best-seller'>
-            <h2 className='best-seller-text' > New</h2>
+            <h2 className='best-seller-text' >New</h2>
         </div>
         <div className='form-horizontal '>
           <label style={{paddingRight:2}}>Sắp xếp </label>
@@ -94,83 +116,19 @@ export default function BestSeller() {
         </div>
       </div>
         <div className='body-product'>
+            {data?.map((item, i) => ( 
           <div className='product-list'>
             <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m6.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Kem Lì Merzy Bite The Beat Mellow Tint #M6</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price">249.000VND</del>
-            </p>
-            </div>  
-            <div className='product-item'>
-              <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m2.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
-              <div className='product-desc'>1 phiên bản màu sắc</div>
-              <p className='product-text'>Son Kem Lì Merzy Bite The Beat Mellow Tint #M2</p>
+              <img src={item?.link} top width="100%" />   
+              <div className='product-desc'>{item.desc}</div>
+              <p className='product-text'>{item.title}</p>
               <p className='price'>
-                <span className="new-price">149.000VND</span>
-                <del className="old-price">249.000VND</del>
-              </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V16.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>(Ver Red) Son Kem Lì Merzy The First Velvet Tint #V16</p>
-            <p className='price'>
-              <span className="new-price">139.000VND</span>
-              <del className="old-price">249.000VND</del>
-            </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt11.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' top width="100%" />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Tint Bóng Merzy Aurora Dewy Tint #DT11</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price">299.000VND</del>
-            </p>
-            </div>
+                <span className="new-price">{item.newPrice}</span>
+                <del className="old-price">{item.oldPrice}</del>
+              </p> 
+              </div>
           </div>
-          <div className='product-list'>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V17.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' style={{height:250}} />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>(Ver Red) Son Kem Lì Merzy The First Velvet Tint #V17</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price">249.000VND</del>
-            </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt10.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} className='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' style={{height:250}} />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Tint Bóng Merzy Aurora Dewy Tint #DT10</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price" >249.000VND</del>
-            </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt4.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} classNameName='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' style={{height:250}} />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Tint Bóng Merzy Aurora Dewy Tint #DT4</p>
-            <p className='price'>
-              <span className="new-price">149.000VND</span>
-              <del className="old-price">299.000VND</del>
-            </p>
-            </div>
-            <div className='product-item'>
-            <img src={`${require("../assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m1.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'} classNameName='son-kem-li-merzy-bite-the-beat-mellow-tint-m2' style={{height:250}} />
-            <div className='product-desc'>1 phiên bản màu sắc</div>
-            <p className='product-text'>Son Kem Lì Merzy Bite The Beat Mellow Tint #M1</p>
-            <p classNameName='price'>
-              <span className="new-price">129.000VND</span>
-              <del className="old-price">249.000VND</del>
-            </p>
-             </div>  
-             
-             </div>
+              ))}
             </div>
           </div>
         </div>

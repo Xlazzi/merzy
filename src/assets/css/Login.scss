@@ -68,7 +68,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: black;
+        background-color: transparent;
         height: 80px;
         z-index: 999;
         .header-left{
@@ -138,5 +138,7 @@
         }
     }  
 }
-
+.header-slider.active{
+  background-color: black;
+}
   

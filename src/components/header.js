@@ -52,9 +52,9 @@ export default function Header() {
         </div>
         <div id='header' className='header-right'> 
             <Nav pills>
-            {/* <NavItem>
+            <NavItem>
                 <div className='header-right-run'> <Link to={"/"}> Trang chủ </Link> </div>
-              </NavItem> */}
+              </NavItem>
               <NavItem>
                 <div className='header-right-run'> <Link className='/bestseller' to={"/bestseller"} href="#"> Best Seller </Link> </div>
               </NavItem>

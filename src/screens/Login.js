@@ -1,18 +1,29 @@
 import logo from '../logo.svg';
-import '../assets/css/App1.scss';
+import '../assets/css/Login.scss';
 import Footer from '../components/footer';
-import { Button } from 'reactstrap';
-import { Form } from 'reactstrap';
-import { FormGroup } from 'reactstrap';
-import { Label } from 'reactstrap';
-import { Input } from 'reactstrap';
 import { Link } from "react-router-dom";
-import { Nav } from 'reactstrap';
-import { NavItem } from 'reactstrap';
-import { NavLink } from 'reactstrap';
-import { Dropdown } from 'reactstrap';
-import { DropdownToggle } from 'reactstrap';
-const App=()=> {
+import {Nav,
+        Button,
+        Form,
+        FormGroup,
+        Input,
+        NavItem,
+        NavLink,
+        Dropdown,
+        DropdownToggle} from 'reactstrap';
+import React, {useState} from 'react'
+
+export default function Login() {
+  const[navbar,setNavbar]=useState(false);
+  const changBackground=()=>{
+    if(window.scrollY>=80){
+      setNavbar(true);
+    }
+    else{
+      setNavbar(false);
+    }
+  }
+  window.addEventListener('scroll',changBackground);
   return (
     <div className='User'>
         <div>
@@ -36,16 +47,16 @@ const App=()=> {
             </div>
        </div>
         </div>
-        <div className='header-slider'>
+        <div className={navbar ? 'header-slider active':'header-slider'}>
         <div className='header-left'>
 
           <img src={`${require("../assets/image/logo.jpg")}`} alt={'logo'} className='logo' />
         </div>
         <div id='header' className='header-right srcolldown '> 
             <Nav pills>
-            {/* <NavItem>
+            <NavItem>
                 <div className='header-right-run'> <Link to={"/"}> Trang chủ </Link> </div>
-              </NavItem> */}
+              </NavItem>
               <NavItem>
               <div className='header-right-run'> <Link className='/bestseller' to={"/bestseller"} href="#"> Best Seller </Link> </div>
               </NavItem>
@@ -103,4 +114,4 @@ const App=()=> {
     </div>
   )
 }
-export default App;
+

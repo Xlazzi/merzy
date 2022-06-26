@@ -1,39 +1,28 @@
-import logo from '../logo.svg';
-import '../assets/css/BestSeller.scss';
-import Footer from '../components/footer';
+import React, {useEffect, useState} from 'react'
 import { Nav,
     NavItem,
     NavLink,
     Dropdown,
     DropdownToggle} from 'reactstrap';
 import { Link } from "react-router-dom";
+import Footer from '../components/footer';
 import axios from 'axios';
 import { url_api } from '../assets/api';
-import React, {useEffect, useState} from 'react'
 
-export default function BestSeller() {
-  const[data,setData]= useState([]);
-  useEffect(() => {
-    axios.get(`${url_api}/BestSeller`)
-    .then(res => {
-      setData(res.data);
-      console.log(res.data);
-    })
-    .catch(error => console.log(error));
-  },[]);
-  const[navbar,setNavbar]=useState(false);
-  const changBackground=()=>{
-    if(window.scrollY>=80){
-      setNavbar(true);
+export default function Cart() {
+    const[navbar,setNavbar]=useState(false);
+    const changBackground=()=>{
+      if(window.scrollY>=80){
+        setNavbar(true);
+      }
+      else{
+        setNavbar(false);
+      }
     }
-    else{
-      setNavbar(false);
-    }
-  }
-  window.addEventListener('scroll',changBackground);
-  return (
-    <div className='BestSeller'> 
-        <div className='header1'>
+window.addEventListener('scroll',changBackground);
+    return (
+    <div>
+           <div className='header1'>
           <div className='header-above'>
             <div className='bcrumb-left'></div>
             <div className='bcrumb-right'>
@@ -41,12 +30,12 @@ export default function BestSeller() {
                     <div className='inner text-center'>
                         <div className='content'>
                             <div className='content-big'>
-                                <h3>Best Seller</h3>
+                                <h3>GIỎ HÀNG CỦA BẠN - MERZY VIỆT NAM</h3>
                             </div>
                             <div className='content-small'>
                                 <a>Trang chủ</a>
                                 <span> / </span>
-                                <span>Best Seller</span>
+                                <span> Giỏ hàng của bạn - MERZY VIỆT NAM</span>
                             </div>
                         </div>
                       </div>
@@ -94,45 +83,16 @@ export default function BestSeller() {
           </div>
         </div>
       </div>
-{/* body */}
-    <div className='body'>
-      <div className='wrapper-body'>
-        <div className='inner-body'>
-        <div className='best-seller'>
-            <h2 className='best-seller-text' > Best Seller</h2>
-        </div>
-        <div className='form-horizontal '>
-          <label style={{paddingRight:2}}>Sắp xếp </label>
-          <select>
-            <option value='manual'>Tùy chọn</option>
-            <option value="best-selling ">Sản phẩm bán chạy</option>
-            <option value="title-ascending">Theo bảng chữ cái A - Z</option>
-            <option value="title-descending">Theo bảng chữ cái Z - A</option>
-            <option value="price-ascending">Giá từ thấp đến cao</option>
-            <option value="price-descending">Giá từ cao đến thấp</option>
-            <option value="created-descending">Mới nhất</option>
-            <option value="created-ascending">Cũ nhất</option>
-          </select>
+      {/* body */}
+      <div id='page-wrapper'>
+        <div className='wrapper'>
+            <div className='inner'>
+                <h1>Giỏ hàng</h1>
+                
+            </div>
         </div>
       </div>
-        <div className='body-product'>
-            {data?.map((item, i) => ( 
-          <div className='product-list'>
-            <div className='product-item'>
-              <img src={item?.link} top width="100%" />   
-              <div className='product-desc'>{item.desc}</div>
-              <p className='product-text'>{item.title}</p>
-              <p className='price'>
-                <span className="new-price">{item.newPrice}</span>
-                <del className="old-price">{item.oldPrice}</del>
-              </p> 
-              </div>
-          </div>
-              ))}
-            </div>
-          </div>
-        </div>
-  {/* footer */}
+     {/* footer */}
         <div> 
             <Footer/>
         </div>

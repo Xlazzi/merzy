@@ -1,0 +1,31 @@
+// reset css 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Source Sans Pro, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+// scollbar
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  } 
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black; 
+  }
+//body
+#page-wrapper{
+    padding: 30px 0px;
+    .wrapper{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        h1 {
+            color: #000000;
+            padding: 0px 0px 15px 0px;
+            margin: 0px 0px 15px 0px;
+            border-bottom: 1px solid #ffffff;
+        }
+    }
+}

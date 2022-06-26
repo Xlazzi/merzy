@@ -6,9 +6,19 @@ import { Nav,
     Dropdown,
     DropdownToggle} from 'reactstrap';
 import { Link } from "react-router-dom";
-import React from 'react'
+import React, { useState} from 'react'
 
 export default function Detail() {
+  const[navbar,setNavbar]=useState(false);
+  const changBackground=()=>{
+    if(window.scrollY>=80){
+      setNavbar(true);
+    }
+    else{
+      setNavbar(false);
+    }
+  }
+  window.addEventListener('scroll',changBackground);
   return (
     <div className='Product'>
       {/* header */}
@@ -32,15 +42,15 @@ export default function Detail() {
                   </div>
               </div>
             </div>
-        <div className='header-slider'>
+            <div className={navbar ? 'header-slider active':'header-slider'}>
           <div className='header-left'>
             <img src={`${require("../assets/image/logo.jpg")}`} alt={'logo'} className='logo' />
           </div>
         <div id='header' className='header-right srcolldown '> 
             <Nav pills>
-            {/* <NavItem>
+            <NavItem>
                 <div className='header-right-run'> <Link to={"/"}> Trang chủ </Link> </div>
-              </NavItem> */}
+              </NavItem>
               <NavItem>
               <div className='header-right-run'> <Link className='/bestseller' to={"/bestseller"} href="#"> Best Seller </Link> </div>
               </NavItem>
