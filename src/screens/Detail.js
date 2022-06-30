@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import React, { useState} from 'react'
 
 export default function Detail() {
+  
   const[navbar,setNavbar]=useState(false);
   const changBackground=()=>{
     if(window.scrollY>=80){
@@ -19,6 +20,7 @@ export default function Detail() {
     }
   }
   window.addEventListener('scroll',changBackground);
+  
   return (
     <div className='Product'>
       {/* header */}
