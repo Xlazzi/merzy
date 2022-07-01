@@ -17,7 +17,7 @@ export default function Detail() {
   const { detailId } = useParams();
   // console.log(detailId);
   useEffect(() => {
-    axios.patch(`${url_api}/BestSeller/${detailId}`, detailId )
+    axios.get(`${url_api}/Products?id=${detailId}`)
     .then(res => {
       setData(res.data);
       console.log(res.data);
@@ -100,11 +100,11 @@ export default function Detail() {
       {/* product detail */}       
         <div className='product-single'>        
           <div className='product-single-image'> 
-          <img src={data.link} title={data.title} alt={data.title}/>
+          <img src={data[0]?.link} title={data[0]?.title} alt={data[0]?.title}/>
           </div>
           <div className='product-sing-content'>
              <div className='pro-content-head'> 
-                <h1>{data.title}</h1>
+                <h1>{data[0]?.title}</h1>
              </div>
             {/* pro-text */}
              <div className='pro-text'>
@@ -125,14 +125,14 @@ export default function Detail() {
              </div>
              {/* pro price */}
              <div className='pro-price'>
-              <span className="current-price">{data.newPrice}</span>
-              <span className="original-price"><s> {data.oldPrice}</s></span>
+              <span className="current-price">{data[0]?.newPrice}</span>
+              <span className="original-price"><s> {data[0]?.oldPrice}</s></span>
               <div className='sale-percentage'>
                 <span class="PriceSaving">(Bạn đã tiết kiệm được 150,000₫)</span>
               </div>
              </div>
              <div class="pro-short-desc">
-								<p><strong>•&nbsp;</strong>Trọng lượng: {data.weight}</p>
+								<p><strong>•&nbsp;</strong>Trọng lượng: {data[0]?.weight}</p>
                 <p><strong>•&nbsp;</strong>Đặc trưng:</p>
                 <p>- Son kem&nbsp;Merzy Bite The Beat Mellow Tint thiết kế vỏ son có màu sắc đặc trưng được thể hiện giống với màu son bên trong.</p>
                 <p>- Khả năng lên màu cực kỳ chuẩn, bền màu, không lem trôi.</p>

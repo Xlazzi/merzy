@@ -1,5 +1,5 @@
 import logo from '../logo.svg';
-import '../assets/css/BestSeller.scss';
+import '../assets/css/Product.scss';
 import Footer from '../components/footer';
 import { Nav,
     NavItem,
@@ -12,15 +12,26 @@ import { url_api } from '../assets/api';
 import React, {useEffect, useState} from 'react'
 import Detail from './Detail';
 
-export default function BestSeller() {
+export default function BestSeller(props) {
   const[data,setData]= useState([]);
+  const {tag} = props;
   useEffect(() => {
-    axios.get(`${url_api}/BestSeller`)
-    .then(res => {
-      setData(res.data);
-      console.log(res.data);
-    })
-    .catch(error => console.log(error));
+    if(tag === "BestSeller"){
+        axios.get(`${url_api}/Products?tag=best-sellers`)
+        .then(res => {
+        setData(res.data);
+        console.log(res.data);
+        })
+        .catch(error => console.log(error));
+    }
+    else{
+        axios.get(`${url_api}/Products?tag=new`)
+        .then(res => {
+        setData(res.data);
+        console.log(res.data);
+        })
+        .catch(error => console.log(error));
+    }
   },[]);
   const[navbar,setNavbar]=useState(false);
   const changBackground=()=>{
@@ -42,12 +53,12 @@ export default function BestSeller() {
                     <div className='inner text-center'>
                         <div className='content'>
                             <div className='content-big'>
-                                <h3>Best Seller</h3>
+                                <h3>{tag === "BestSeller" ? "Best Seller": "New"}</h3>
                             </div>
                             <div className='content-small'>
                                 <a>Trang chủ</a>
                                 <span> / </span>
-                                <span>Best Seller</span>
+                                <span>{tag === "BestSeller" ? "Best Seller": "New"}</span>
                             </div>
                         </div>
                       </div>
@@ -65,10 +76,10 @@ export default function BestSeller() {
                 <div className='header-right-run'> <Link to={"/"}> Trang chủ </Link> </div>
               </NavItem>
               <NavItem>
-              <div className='header-right-run'> <Link className='/bestseller' to={"/bestseller"} href="#"> Best Seller </Link> </div>
+              <div className='header-right-run'> <Link className='/bestseller' to={"/bestseller"}> Best Seller </Link> </div>
               </NavItem>
               <NavItem>
-              <div className='header-right-run'> <Link className='/new' to={"/new"}  href="#"> New </Link> </div>
+              <div className='header-right-run'> <Link className='/new' to={"/new"} > New </Link> </div>
               </NavItem>
               <Dropdown nav toggle>
                 <div className='header-right-run'> <DropdownToggle caret nav > Lip </DropdownToggle></div>
@@ -100,7 +111,7 @@ export default function BestSeller() {
       <div className='wrapper-body'>
         <div className='inner-body'>
         <div className='best-seller'>
-            <h2 className='best-seller-text' > Best Seller</h2>
+            <h2 className='best-seller-text' > {tag === "BestSeller" ? "Best Seller": "new"}</h2>
         </div>
         <div className='form-horizontal '>
           <label style={{paddingRight:2}}>Sắp xếp </label>
