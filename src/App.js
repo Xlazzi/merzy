@@ -5,7 +5,6 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Home from './screens/Home'
 import Login from './screens/Login'
 import Detail from './screens/Detail';
