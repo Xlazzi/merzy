@@ -6,11 +6,24 @@ import { Nav,
     Dropdown,
     DropdownToggle} from 'reactstrap';
 import { Link } from "react-router-dom";
-import React, { useState} from 'react'
+import React, {useEffect, useState} from 'react'
+import { useParams } from "react-router-dom";
+import axios from 'axios';
+import { url_api } from '../assets/api';
 
 export default function Detail() {
-  
   const[navbar,setNavbar]=useState(false);
+  const[data,setData]= useState([]);
+  const { detailId } = useParams();
+  // console.log(detailId);
+  useEffect(() => {
+    axios.patch(`${url_api}/BestSeller/${detailId}`, detailId )
+    .then(res => {
+      setData(res.data);
+      console.log(res.data);
+    }) 
+    .catch(error => console.log(error));
+    },[]);
   const changBackground=()=>{
     if(window.scrollY>=80){
       setNavbar(true);
@@ -84,25 +97,25 @@ export default function Detail() {
           </div>
         </div>
       </div>
-      {/* product detail */}
-        <div className='product-single'>
+      {/* product detail */}       
+        <div className='product-single'>        
           <div className='product-single-image'> 
-          <img src={`${require("../assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V16.jpg")}`} alt={'son-kem-li-merzy-bite-the-beat-mellow-tint-m2'}/>
+          <img src={data.link} title={data.title} alt={data.title}/>
           </div>
           <div className='product-sing-content'>
              <div className='pro-content-head'> 
-                <h1>Son Kem Lì Merzy Bite The Beat Mellow Tint #M2</h1>
+                <h1>{data.title}</h1>
              </div>
             {/* pro-text */}
              <div className='pro-text'>
               <div className='pro-brand'>
                   <span className='title'>Thương hiệu: </span>
-                  <a href='#'>Merzy</a>
+                  <a href='/'>Merzy</a>
               </div>
               <span style={{marginLeft:5, marginRight:5}} >|</span>
               <div className='pro-type'>
                   <span className='title'>Loại: </span>
-                  <a href='#'>Lip</a>
+                  <a href=''>Lip</a>
               </div>
               <span style={{marginLeft:5, marginRight:5}} >|</span>
               <div className='pro-sku'>
@@ -112,14 +125,14 @@ export default function Detail() {
              </div>
              {/* pro price */}
              <div className='pro-price'>
-              <span className="current-price">149,000₫</span>
-              <span className="original-price"><s>299,000₫</s></span>
+              <span className="current-price">{data.newPrice}</span>
+              <span className="original-price"><s> {data.oldPrice}</s></span>
               <div className='sale-percentage'>
                 <span class="PriceSaving">(Bạn đã tiết kiệm được 150,000₫)</span>
               </div>
              </div>
              <div class="pro-short-desc">
-								<p><strong>•&nbsp;</strong>Trọng lượng: 4g</p>
+								<p><strong>•&nbsp;</strong>Trọng lượng: {data.weight}</p>
                 <p><strong>•&nbsp;</strong>Đặc trưng:</p>
                 <p>- Son kem&nbsp;Merzy Bite The Beat Mellow Tint thiết kế vỏ son có màu sắc đặc trưng được thể hiện giống với màu son bên trong.</p>
                 <p>- Khả năng lên màu cực kỳ chuẩn, bền màu, không lem trôi.</p>

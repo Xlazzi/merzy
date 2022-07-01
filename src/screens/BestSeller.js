@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import { url_api } from '../assets/api';
 import React, {useEffect, useState} from 'react'
+import Detail from './Detail';
 
 export default function BestSeller() {
   const[data,setData]= useState([]);
@@ -118,6 +119,7 @@ export default function BestSeller() {
         <div className='body-product'>
             {data?.map((item, i) => ( 
           <div className='product-list'>
+            <Link to={`/detail/${item.id}`}> 
             <div className='product-item'>
               <img src={item?.link} top width="100%" />   
               <div className='product-desc'>{item.desc}</div>
@@ -127,6 +129,7 @@ export default function BestSeller() {
                 <del className="old-price">{item.oldPrice}</del>
               </p> 
               </div>
+              </Link>
           </div>
               ))}
             </div>

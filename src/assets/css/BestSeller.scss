@@ -187,8 +187,23 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            a{
+                text-decoration: none;
+                color: black;
+            }
             img{
                 width: 250px;
+            }
+            .product-item{
+                .product-desc{
+                    color: black;
+                }
+                .price{
+                    font-weight: bold;
+                    .old-price{
+                        color: #999;
+                    }
+                }
             }
         }
     }
