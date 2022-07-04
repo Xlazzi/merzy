@@ -15,17 +15,21 @@
     background: black; 
   }
 //body
-#page-wrapper{
+#page-wrapper {
     padding: 30px 0px;
     .wrapper{
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 15px;
-        h1 {
-            color: #000000;
-            padding: 0px 0px 15px 0px;
-            margin: 0px 0px 15px 0px;
-            border-bottom: 1px solid #ffffff;
-        }
+       .inner{
+            h1 {
+                padding: 0px 0px 15px 0px;
+                margin: 0px 0px 15px 0px;
+                border-bottom: 1px solid #ffffff;
+                font-size: 24px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+       }
     }
 }
