@@ -8,8 +8,8 @@ import {
 import Home from './screens/Home'
 import Login from './screens/Login'
 import Detail from './screens/Detail';
-import Cart from './screens/Cart';
 import Product from './screens/Products';
+import Cart from './screens/Cart';
 export default function App() {
   return (
     <BrowserRouter>

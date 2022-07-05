@@ -28,18 +28,19 @@ const App= () => {
      </div>
 
       {/* body */}
+      
       <div className='body'>
         <div className='product-hot'>
         <h2 className='product-hot-text' > Sản phẩm nổi bật</h2>
         </div>
         <div className='body-button'> 
-          <div className='body-button-text'> 
+          {/* <div className='body-button-text'> 
             <ButtonGroup>
                 <Button> Best Seller </Button>
                 <Button> What's new </Button>
                 <Button> On Sale </Button>
               </ButtonGroup>
-          </div>
+          </div> */}
           <div className='body-product'>
             {data?.map((item, i) => ( 
           <div className='product-list'>
@@ -84,7 +85,7 @@ const App= () => {
           </div>
         </div>
         <div className='store-image-right'>
-            <iframe width="555" height="443.48"  src={`${("https://www.youtube.com/embed/1w94_mCNhzQ")}`} title="YouTubevideo player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="555" height="443.48"  src={`${require("../assets/video/[MERZY머지] 2019 'MERZY CREW' Brand film.mp4")}`} title="YouTubevideo player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
       </div>

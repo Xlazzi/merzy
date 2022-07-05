@@ -54,7 +54,7 @@ export default function Navbar() {
                 <div className='header-right-run'> <Link className='user' to={"/user"}> Tài khoản </Link></div>
               </NavItem> 
               <NavItem>
-                <div className='header-right-run'> <NavLink href="#" > Giỏ hàng (0) </NavLink></div>
+                <div className='header-right-run'> <Link className='cart' to={"/cart"}> Giỏ hàng </Link></div>
               </NavItem>
             </Nav>
           </div>
