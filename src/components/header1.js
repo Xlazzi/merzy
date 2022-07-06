@@ -15,7 +15,7 @@ import axios from 'axios';
 import { url_api } from '../assets/api';
 import Navbar from './navbar';
 
-export default function Index() {
+export default function Header1() {
   const[data,setData]= useState([]);
   const[navbar,setNavbar]=useState(false);
   useEffect(() => {

@@ -4,7 +4,7 @@ import {
   Button ,
   ButtonGroup } from 'reactstrap'; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Index from "../components/index"
+import Header1 from "../components/header1"
 import Footer from '../components/footer';
 import React, { useEffect, useState} from 'react'
 import { Link } from "react-router-dom";
@@ -24,7 +24,7 @@ const App= () => {
   return (
     <div className="App">
      <div>
-        <Index/>
+        <Header1/>
      </div>
 
       {/* body */}
