@@ -4,9 +4,10 @@ import Footer from '../components/footer';
 import '../assets/css/Cart.scss';
 import React, {useEffect, useState} from 'react'
 import Navbar from '../components/navbar';
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Cart() {
- 
+  
     return (
     <div className='cart'>
       {/* header */}

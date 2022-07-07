@@ -3,6 +3,7 @@ import '../assets/css/Detail.scss';
 import React, {useEffect, useState} from 'react'
 import { useParams } from "react-router-dom";
 import axios from 'axios';
+import {useDispatch } from "react-redux";
 import { url_api } from '../assets/api';
 import Header from '../components/header';
 
@@ -10,6 +11,7 @@ export default function Detail() {
   const[data,setData]= useState([]);
   const { detailId } = useParams();
   // console.log(detailId);
+  
   useEffect(() => {
     axios.get(`${url_api}/Products?id=${detailId}`)
     .then(res => {
@@ -18,6 +20,7 @@ export default function Detail() {
     }) 
     .catch(error => console.log(error));
     },[]);
+    
   return (
     <div className='Product'>
       {/* header */}

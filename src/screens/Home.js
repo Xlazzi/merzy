@@ -29,7 +29,8 @@ const App= () => {
 
       {/* body */}
       
-      <div className='body'>
+     <div className='main'>
+     <div className='body'>
         <div className='product-hot'>
         <h2 className='product-hot-text' > Sản phẩm nổi bật</h2>
         </div>
@@ -89,6 +90,7 @@ const App= () => {
         </div>
       </div>
       </div>
+     </div>
    {/* footer */} 
    <div>
        <Footer/>
