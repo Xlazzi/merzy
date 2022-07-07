@@ -21,7 +21,9 @@ server.db = router.db;
 
 //server.use(jsonServer.bodyParser);
 server.use(morgan("tiny"));
-server.use(cors);
+server.use(cors({
+    origin: "*",
+  }));
 server.use("/assets", express.static(__dirname + "/assets"));
 server.use(
   "/",
