@@ -3,17 +3,17 @@
     {
       "id": 1,
       "title": "poster1",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/poster1.jpg?raw=true"
+      "link": "/assets/image/poster1.jpg"
     },
     {
       "id": 2,
       "title": "poster2",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/poster2.jpg?raw=true"
+      "link": "/assets//image/poster2.jpg"
     },
     {
       "id": 3,
       "title": "poster3",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/poster3.jpg?raw=true"
+      "link": "/assets//image/poster3.jpg"
     }
   ],
   "Products": [
@@ -26,7 +26,7 @@
       "oldPrice": "249.000VND",
       "weight":"4g",
       "tag":"best-sellers",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m2.jpg?raw=true"
+      "link": "/assets//image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m2.jpg"
     },
     {
       "2": "",
@@ -37,7 +37,7 @@
       "oldPrice": "249.000VND",
       "weight":"3.8g",
       "tag":"best-sellers",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V16.jpg?raw=true"
+      "link": "/assets//image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V16.jpg"
     },
     {
       "3": "",
@@ -48,7 +48,7 @@
       "oldPrice": "249.000VND",
       "weight":"5.5g",
       "tag":"best-sellers",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt11.jpg?raw=true"
+      "link": "/assets//image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt11.jpg"
     },
     {
       "4": "",
@@ -59,7 +59,7 @@
       "oldPrice": "249.000VND",
       "weight":"4g",
       "tag":"best-sellers",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m6.jpg?raw=true"
+      "link": "/assets//image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m6.jpg"
     },
     {
       "5": "",
@@ -70,7 +70,7 @@
       "oldPrice": "249.000VND",
       "weight":"3.8g",
       "tag":"best-sellers",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V17.jpg?raw=true"
+      "link": "/assets//image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V17.jpg"
     },
     {
       "id": 6,
@@ -80,7 +80,7 @@
       "oldPrice": "249.000VND",
       "weight":"5.5g",
       "tag":"best-sellers",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt10.jpg?raw=true"
+      "link": "/assets//image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt10.jpg"
     },
     {
       "id": 7,
@@ -90,7 +90,7 @@
       "oldPrice": "249.000VND",
       "weight":"5.5g",
       "tag":"best-sellers",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt4.jpg?raw=true"
+      "link": "/assets//image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt4.jpg"
     },
     {
       "id": 8,
@@ -100,7 +100,7 @@
       "oldPrice": "249.000VND",
       "weight":"4g",
       "tag":"best-sellers",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m1.jpg?raw=true"
+      "link": "/assets//image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m1.jpg"
     }, 
     {
       "id": 9,
@@ -110,7 +110,7 @@
       "oldPrice": "598.000VND",
       "weight":"3g",
       "tag":"new",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/Combo%202%20Th%E1%BB%8Fi%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint.jpg?raw=true"
+      "link": "/assets//image/product/Combo%202%20Th%E1%BB%8Fi%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint.jpg"
     },
     {
       "id": 10,
@@ -120,7 +120,7 @@
       "oldPrice": "1259.000VND",
       "weight":"9.9g",
       "tag":"new",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20Combo%20Trang%20%C4%90i%E1%BB%83m%20Merzy%20Soft%20Touch%20Collection%20(4%20m%C3%B3n).jpg?raw=true"
+      "link": "/assets//image/product/(New)%20Combo%20Trang%20%C4%90i%E1%BB%83m%20Merzy%20Soft%20Touch%20Collection%20(4%20m%C3%B3n).jpg"
     },
     {
       "id": 11,
@@ -130,7 +130,7 @@
       "oldPrice": "299.000VND",
       "weight":"3g",
       "tag":"new",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint%20%23SL5.jpg?raw=true"
+      "link": "/assets//image/product/(New)%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint%20%23SL5.jpg"
     },
     {
       "id": 12,
@@ -140,7 +140,7 @@
       "oldPrice": "299.000VND",
       "weight":"3g",
       "tag":"new",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint%20%23SL3.jpg?raw=true"
+      "link": "/assets//image/product/(New)%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint%20%23SL3.jpg"
     },
     {
       "id": 13,
@@ -150,7 +150,7 @@
       "oldPrice": "299.000VND",
       "weight":"3g",
       "tag":"new",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint%20%23SL1.jpg?raw=true"
+      "link": "/assets//image/product/(New)%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint%20%23SL1.jpg"
     },
     {
       "id": 14,
@@ -160,7 +160,7 @@
       "oldPrice": "319.000VND",
       "weight":"0.9g",
       "tag":"new",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20Nh%C5%A9%20M%E1%BA%AFt%20Merzy%20Soft%20Touch%20Stick%20Shadow%20%23SS2.jpg?raw=true"
+      "link": "/assets//image/product/(New)%20Nh%C5%A9%20M%E1%BA%AFt%20Merzy%20Soft%20Touch%20Stick%20Shadow%20%23SS2.jpg"
     },
     {
       "id": 15,
@@ -170,7 +170,7 @@
       "oldPrice": "349.000VND",
       "weight":"3g",
       "tag":"new",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20M%C3%A1%20H%E1%BB%93ng%20D%E1%BA%A1ng%20L%E1%BB%8Fng%20Merzy%20Soft%20Touch%20Liquid%20Blusher%20%23SB3.jpg?raw=true"
+      "link": "/assets//image/product/(New)%20M%C3%A1%20H%E1%BB%93ng%20D%E1%BA%A1ng%20L%E1%BB%8Fng%20Merzy%20Soft%20Touch%20Liquid%20Blusher%20%23SB3.jpg"
     },
     {
       "id": 15,
@@ -180,7 +180,7 @@
       "oldPrice": "349.000VND",
       "weight":"3g",
       "tag":"new",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20M%C3%A1%20H%E1%BB%93ng%20D%E1%BA%A1ng%20L%E1%BB%8Fng%20Merzy%20Soft%20Touch%20Liquid%20Blusher%20%23SB2.jpg?raw=true"
+      "link": "/assets//image/product/(New)%20M%C3%A1%20H%E1%BB%93ng%20D%E1%BA%A1ng%20L%E1%BB%8Fng%20Merzy%20Soft%20Touch%20Liquid%20Blusher%20%23SB2.jpg"
     },
     {
       "id": 15,
@@ -190,7 +190,7 @@
       "oldPrice": "349.000VND",
       "weight":"3g",
       "tag":"new",
-      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20M%C3%A1%20H%E1%BB%93ng%20D%E1%BA%A1ng%20L%E1%BB%8Fng%20Merzy%20Soft%20Touch%20Liquid%20Blusher%20%23SB1.jpg?raw=true"
+      "link": "/assets//image/product/(New)%20M%C3%A1%20H%E1%BB%93ng%20D%E1%BA%A1ng%20L%E1%BB%8Fng%20Merzy%20Soft%20Touch%20Liquid%20Blusher%20%23SB1.jpg"
     }
   ]
  
