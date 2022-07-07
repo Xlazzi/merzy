@@ -1,25 +1,197 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "User111",
-            "email": "user1@gmail.com",
-            "age": 31,
-            "avatar": "assets/images/users/user1.png"
-        },
-        {
-            "id": 2,
-            "name": "User2",
-            "email": "user2@gmail.com",
-            "age": 20,
-            "avatar": "assets/images/users/user2.png"
-        },
-        {
-            "id": 3,
-            "name": "User1",
-            "email": "user1.2@gmail.com",
-            "age": 25,
-            "avatar": "assets/images/users/user3.png"
-        }
-    ]
+  "header": [
+    {
+      "id": 1,
+      "title": "poster1",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/poster1.jpg?raw=true"
+    },
+    {
+      "id": 2,
+      "title": "poster2",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/poster2.jpg?raw=true"
+    },
+    {
+      "id": 3,
+      "title": "poster3",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/poster3.jpg?raw=true"
+    }
+  ],
+  "Products": [
+    {
+      "1": "",
+      "id": 1,
+      "title": "Son Kem Lì Merzy Bite The Beat Mellow Tint M2",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "149.000VND",
+      "oldPrice": "249.000VND",
+      "weight":"4g",
+      "tag":"best-sellers",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m2.jpg?raw=true"
+    },
+    {
+      "2": "",
+      "id": 2,
+      "title": "(Ver Red) Son Kem Lì Merzy The First Velvet Tint #V16",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "139.000VND",
+      "oldPrice": "249.000VND",
+      "weight":"3.8g",
+      "tag":"best-sellers",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V16.jpg?raw=true"
+    },
+    {
+      "3": "",
+      "id": 3,
+      "title": "Son Tint Bóng Merzy Aurora Dewy Tint #DT11",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "149.000VND",
+      "oldPrice": "249.000VND",
+      "weight":"5.5g",
+      "tag":"best-sellers",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt11.jpg?raw=true"
+    },
+    {
+      "4": "",
+      "id": 4,
+      "title": "Son Kem Lì Merzy Bite The Beat Mellow Tint #M6",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "149.000VND",
+      "oldPrice": "249.000VND",
+      "weight":"4g",
+      "tag":"best-sellers",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m6.jpg?raw=true"
+    },
+    {
+      "5": "",
+      "id": 5,
+      "title": "(Ver Red) Son Kem Lì Merzy The First Velvet Tint #V17",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "149.000VND",
+      "oldPrice": "249.000VND",
+      "weight":"3.8g",
+      "tag":"best-sellers",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/Son-kem-li-merzy-the-first-velvet-tint-V17.jpg?raw=true"
+    },
+    {
+      "id": 6,
+      "title": "Son Tint Bóng Merzy Aurora Dewy Tint #DT10",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "149.000VND",
+      "oldPrice": "249.000VND",
+      "weight":"5.5g",
+      "tag":"best-sellers",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt10.jpg?raw=true"
+    },
+    {
+      "id": 7,
+      "title": "Son Tint Bóng Merzy Aurora Dewy Tint #DT4",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "149.000VND",
+      "oldPrice": "249.000VND",
+      "weight":"5.5g",
+      "tag":"best-sellers",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-tint-bong-merzy-aurora-dewy-tint-dt4.jpg?raw=true"
+    },
+    {
+      "id": 8,
+      "title": "Son Kem Lì Merzy Bite The Beat Mellow Tint #M1",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "149.000VND",
+      "oldPrice": "249.000VND",
+      "weight":"4g",
+      "tag":"best-sellers",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product-banner/son-kem-li-merzy-bite-the-beat-mellow-tint-m1.jpg?raw=true"
+    }, 
+    {
+      "id": 9,
+      "title": "(New) Combo 2 Thỏi Son Kem Lì Merzy Soft Touch Lip Tint",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "232.000VND",
+      "oldPrice": "598.000VND",
+      "weight":"3g",
+      "tag":"new",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/Combo%202%20Th%E1%BB%8Fi%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint.jpg?raw=true"
+    },
+    {
+      "id": 10,
+      "title": "(New) Combo Trang Điểm Merzy Soft Touch Collection (4 món)",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "656.000VND",
+      "oldPrice": "1259.000VND",
+      "weight":"9.9g",
+      "tag":"new",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20Combo%20Trang%20%C4%90i%E1%BB%83m%20Merzy%20Soft%20Touch%20Collection%20(4%20m%C3%B3n).jpg?raw=true"
+    },
+    {
+      "id": 11,
+      "title": "(New) Son Kem Lì Merzy Soft Touch Lip Tint #SL5",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "129.000VND",
+      "oldPrice": "299.000VND",
+      "weight":"3g",
+      "tag":"new",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint%20%23SL5.jpg?raw=true"
+    },
+    {
+      "id": 12,
+      "title": "(New) Son Kem Lì Merzy Soft Touch Lip Tint #SL3",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "129.000VND",
+      "oldPrice": "299.000VND",
+      "weight":"3g",
+      "tag":"new",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint%20%23SL3.jpg?raw=true"
+    },
+    {
+      "id": 13,
+      "title": "(New) Son Kem Lì Merzy Soft Touch Lip Tint #SL1",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "129.000VND",
+      "oldPrice": "299.000VND",
+      "weight":"3g",
+      "tag":"new",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20Son%20Kem%20L%C3%AC%20Merzy%20Soft%20Touch%20Lip%20Tint%20%23SL1.jpg?raw=true"
+    },
+    {
+      "id": 14,
+      "title": "(New) Nhũ Mắt Merzy Soft Touch Stick Shadow #SS2",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "209.000VND",
+      "oldPrice": "319.000VND",
+      "weight":"0.9g",
+      "tag":"new",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20Nh%C5%A9%20M%E1%BA%AFt%20Merzy%20Soft%20Touch%20Stick%20Shadow%20%23SS2.jpg?raw=true"
+    },
+    {
+      "id": 15,
+      "title": "(New) Má Hồng Dạng Lỏng Merzy Soft Touch Liquid Blusher #SB3",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "209.000VND",
+      "oldPrice": "349.000VND",
+      "weight":"3g",
+      "tag":"new",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20M%C3%A1%20H%E1%BB%93ng%20D%E1%BA%A1ng%20L%E1%BB%8Fng%20Merzy%20Soft%20Touch%20Liquid%20Blusher%20%23SB3.jpg?raw=true"
+    },
+    {
+      "id": 15,
+      "title": "(New) Má Hồng Dạng Lỏng Merzy Soft Touch Liquid Blusher #SB2",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "209.000VND",
+      "oldPrice": "349.000VND",
+      "weight":"3g",
+      "tag":"new",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20M%C3%A1%20H%E1%BB%93ng%20D%E1%BA%A1ng%20L%E1%BB%8Fng%20Merzy%20Soft%20Touch%20Liquid%20Blusher%20%23SB2.jpg?raw=true"
+    },
+    {
+      "id": 15,
+      "title": "(New) Má Hồng Dạng Lỏng Merzy Soft Touch Liquid Blusher #SB1",
+      "desc": "1 phiên bản màu sắc",
+      "newPrice": "209.000VND",
+      "oldPrice": "349.000VND",
+      "weight":"3g",
+      "tag":"new",
+      "link": "https://github.com/Xlazzi/merzy/blob/master/src/assets/image/product/(New)%20M%C3%A1%20H%E1%BB%93ng%20D%E1%BA%A1ng%20L%E1%BB%8Fng%20Merzy%20Soft%20Touch%20Liquid%20Blusher%20%23SB1.jpg?raw=true"
+    }
+  ]
+ 
 }
