@@ -33,7 +33,7 @@ export default function Header1() {
        <Carousel controls={false}>
         {data?.map((item, i) => (
           <Carousel.Item>
-          <img src={item?.link} alt={item?.title} className='poster'style={{height:721}} />
+          <img src={url_api+item?.link} alt={item?.title} className='poster'style={{height:721}} />
          </Carousel.Item>
         ))}
     

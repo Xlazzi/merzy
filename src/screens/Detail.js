@@ -25,7 +25,7 @@ export default function Detail() {
       {/* product detail */}       
         <div className='product-single'>        
           <div className='product-single-image'> 
-          <img src={data[0]?.link} title={data[0]?.title} alt={data[0]?.title}/>
+          <img src={url_api+data[0]?.link} title={data[0]?.title} alt={data[0]?.title}/>
           </div>
           <div className='product-sing-content'>
              <div className='pro-content-head'> 

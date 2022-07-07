@@ -46,7 +46,7 @@ const App= () => {
           <div className='product-list'>
             <Link to={`/detail/${item.id}`}> 
             <div className='product-item'>
-              <img src={item?.link} top width="100%" />   
+              <img src={url_api+item?.link} top width="100%" />   
               <div className='product-desc'>{item.desc}</div>
               <p className='product-text'>{item.title}</p>
               <p className='price'>
