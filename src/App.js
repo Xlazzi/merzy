@@ -7,7 +7,7 @@ export default function App() {
     const store = createStore(allReducer);
     return (
       <Provider store={store}>
-        <App />
+        <AppContainer />
       </Provider>
     );
   }

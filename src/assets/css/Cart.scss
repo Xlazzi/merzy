@@ -36,7 +36,7 @@
                 font-weight: bold;
             }
             td{
-              padding: 30px 15px;
+              padding: 30px 10px;
               border: none;
               .cart-image{
                 display: block;
@@ -51,27 +51,30 @@
             .h4{
               display: block;
               text-decoration: none;
-              color: black;
+              color: red;
               font-size: 20px;
               font-weight: bold;
+              padding-top: 35px;
             }
             .cart_remove{
               text-decoration: none;
               color: black;
             }
             .h3{
-              font-size: 22px;
+              font-size: 20px;
+              color: red;
               font-weight: bold;
             }
             .js-qty{
               .decrease,.increase{
                 display: inline-block;
-                font-size: 24px;
+                font-size: 22px;
+                cursor: pointer;
               }
               .input-quantity{
                 border: none;
                 display: inline-block;
-                width: 100px;
+                width: 50px;
               }
             }
         .cart_button{

@@ -10,6 +10,8 @@ import Login from './screens/Login'
 import Detail from './screens/Detail';
 import Product from './screens/Products';
 import Cart from './screens/Cart';
+
+
 export default function App() {
   return (
     <BrowserRouter>

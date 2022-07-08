@@ -5,6 +5,9 @@ import { Nav,
     Dropdown,
     DropdownToggle}from 'reactstrap'; 
 import { Link } from "react-router-dom";
+import { useSelector} from "react-redux";
+import '../assets/css/App.scss';
+
 export default function Navbar() {
     const[navbar,setNavbar]=useState(false);
     const changBackground=()=>{
@@ -16,7 +19,7 @@ export default function Navbar() {
       }
     }
     window.addEventListener('scroll',changBackground);
-
+    const cartData = useSelector(store=>store.productReducer.cart)
   return (
     <div>
          <div className={navbar ? 'header-slider active':'header-slider'}>
@@ -55,6 +58,7 @@ export default function Navbar() {
               </NavItem> 
               <NavItem>
                 <div className='header-right-run'> <Link className='cart' to={"/cart"}> Giỏ hàng </Link></div>
+                <div className='item-number'>{cartData?.length}</div>
               </NavItem>
             </Nav>
           </div>

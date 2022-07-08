@@ -5,9 +5,12 @@ import '../assets/css/Cart.scss';
 import React, {useEffect, useState} from 'react'
 import Navbar from '../components/navbar';
 import { useSelector, useDispatch } from "react-redux";
+import { url_api } from '../assets/api';
 
 export default function Cart() {
-  
+  const dispatch = useDispatch();
+  const cartData = useSelector(store => store.productReducer.cart); 
+
     return (
     <div className='cart'>
       {/* header */}
@@ -47,6 +50,7 @@ export default function Cart() {
             <div className='inner'>
                 <h1>Giỏ hàng</h1>
                 <form method='post'> 
+            
                   <table>
                     <thead>
                       <tr className='head_name'>
@@ -57,27 +61,30 @@ export default function Cart() {
                       </tr>
                     </thead>
                     <tbody>
+                    {cartData?.map((item, i) => {
+                      return ( 
                       <tr>
                         <td>
                           <a className='cart-image' href=''>
-                          <img className='store-image-left-item-pic'  src={`${require("../assets/image/image-store/hg_img_thumb1.jpg")}`}  alt={'hg_img_thumb6'} />
+                          <img className='store-image-left-item-pic'  src={url_api+item?.link}  alt={'hg_img_thumb6'} />
                           </a>
                         </td>
                         <td>
-                        <a href="" class="h4">Son Kem Lì Merzy Bite The Beat Mellow Tint #M1 </a>
+                        <a href="" class="h4">{item?.title}</a>
                         <a href="/cart/change?line=1&amp;quantity=0" class="cart_remove">
 								      	<small>Xóa</small> </a>
                         </td>
-                        <td> <span class="h3">129,000₫ </span> </td>
+                        <td> <span class="h3">{item?.newPrice} </span> </td>
                         <td>
                           <div className='js-qty'>     
-                            <div className='decrease'>-</div>
-                              <input className='input-quantity' value={1} style={{textAlign:'center'}} />
-                            <div className='increase'>+</div>    
+                            <div  className='decrease'>-</div>
+                              <input  className='input-quantity' value={1} style={{textAlign:'center'}} />
+                            <div   className='increase'>+</div>    
                           </div>
                         </td>
                         <td> <span class="h3"> 258,000₫	</span> </td>
                       </tr>
+                    )})}
                     </tbody>
                   </table>
                   <div className='cart_button'>

@@ -11,7 +11,7 @@ export default function Detail() {
   const[data,setData]= useState([]);
   const { detailId } = useParams();
   // console.log(detailId);
-  
+  const dispatch = useDispatch();
   useEffect(() => {
     axios.get(`${url_api}/Products?id=${detailId}`)
     .then(res => {
@@ -20,7 +20,9 @@ export default function Detail() {
     }) 
     .catch(error => console.log(error));
     },[]);
-    
+    const addToCart = (item) => { dispatch({ type: "ADD_PRODUCT", data: item }); }
+
+  
   return (
     <div className='Product'>
       {/* header */}
@@ -79,10 +81,10 @@ export default function Detail() {
                 </div>
               </div>
               <div className='product-actions'>
-              <button type="button"  className="btnAddToCart">
+              <button type="button"  className="btnAddToCart"  onClick={()=>addToCart(data[0])}>
                 <span id="AddToCartText">Thêm vào giỏ</span>
               </button>
-              <button type="button" className="btnBuyNow">Mua ngay</button>
+              <button  onClick={()=>addToCart(data[0])} type="button" className="btnBuyNow">Mua ngay</button>
               </div>
           </div>
         </div>  
