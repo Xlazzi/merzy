@@ -6,7 +6,7 @@ import axios from 'axios';
 import {useDispatch } from "react-redux";
 import { url_api } from '../assets/api';
 import Header from '../components/header';
-
+import VNDFormat from '../util/Currencyformat';
 export default function Detail() {
   const[data,setData]= useState([]);
   const { detailId } = useParams();
@@ -20,7 +20,10 @@ export default function Detail() {
     }) 
     .catch(error => console.log(error));
     },[]);
-    const addToCart = (item) => { dispatch({ type: "ADD_PRODUCT", data: item }); }
+    const addToCart = (item) => { 
+      item.quantity = parseInt(document.querySelector(".input-quantity").value);
+      dispatch({ type: "ADD_PRODUCT", data: item }); 
+    }
 
   
   return (
@@ -55,10 +58,10 @@ export default function Detail() {
              </div>
              {/* pro price */}
              <div className='pro-price'>
-              <span className="current-price">{data[0]?.newPrice}</span>
-              <span className="original-price"><s> {data[0]?.oldPrice}</s></span>
+              <span className="current-price">{VNDFormat(data[0]?.newPrice)}</span>
+              <span className="original-price"><s> {VNDFormat(data[0]?.oldPrice)}</s></span>
               <div className='sale-percentage'>
-                <span class="PriceSaving">(Bạn đã tiết kiệm được 150,000₫)</span>
+                <span class="PriceSaving">(Bạn đã tiết kiệm được {VNDFormat(data[0]?.oldPrice-data[0]?.newPrice)})</span>
               </div>
              </div>
              <div class="pro-short-desc">

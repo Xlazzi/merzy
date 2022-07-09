@@ -6,11 +6,27 @@ import React, {useEffect, useState} from 'react'
 import Navbar from '../components/navbar';
 import { useSelector, useDispatch } from "react-redux";
 import { url_api } from '../assets/api';
+import VNDFormat from '../util/Currencyformat';
 
 export default function Cart() {
   const dispatch = useDispatch();
   const cartData = useSelector(store => store.productReducer.cart); 
 
+const changeQuantity=(type,item)=>{
+    if (type === 'increase') {
+      dispatch({ type: "DECREASE_PRODUCT", data: { ...item, quantity: Number(item?.quantity) + 1 }}); 
+    } else {
+      dispatch({ type: "DECREASE_PRODUCT", data: { ...item, quantity: Number(item?.quantity) >= 1 ? Number(item?.quantity) - 1 : 0 }}); 
+    }
+}
+
+
+  // const delCart = (item) => { dispatch({ type: "DELETE_CART", data: item }); }
+  const delCart =(item)=> () => {
+    dispatch({
+      type: "DELETE_CART", 
+      data: item
+    }) };
     return (
     <div className='cart'>
       {/* header */}
@@ -48,9 +64,7 @@ export default function Cart() {
       <div id='page-wrapper'>
         <div className='wrapper'>
             <div className='inner'>
-                <h1>Giỏ hàng</h1>
-                <form method='post'> 
-            
+                <h1>Giỏ hàng</h1>     
                   <table>
                     <thead>
                       <tr className='head_name'>
@@ -71,18 +85,18 @@ export default function Cart() {
                         </td>
                         <td>
                         <a href="" class="h4">{item?.title}</a>
-                        <a href="/cart/change?line=1&amp;quantity=0" class="cart_remove">
-								      	<small>Xóa</small> </a>
+                        
+								      	<small class="cart_remove" onClick={delCart(item)} >Xóa</small>
                         </td>
-                        <td> <span class="h3">{item?.newPrice} </span> </td>
+                        <td> <span class="h3">{VNDFormat(item?.newPrice)} </span> </td>
                         <td>
                           <div className='js-qty'>     
-                            <div  className='decrease'>-</div>
-                              <input  className='input-quantity' value={1} style={{textAlign:'center'}} />
-                            <div   className='increase'>+</div>    
+                            <div onClick={() => changeQuantity('reduce', item)} className='decrease'>-</div>
+                              <input  className='input-quantity'  value={item?.quantity} style={{textAlign:'center'}} />
+                            <div onClick={() => changeQuantity('increase', item)} className='increase'>+</div>    
                           </div>
                         </td>
-                        <td> <span class="h3"> 258,000₫	</span> </td>
+                        <td> <span class="h3"> {VNDFormat(item?.newPrice * item?.quantity)}	</span> </td>
                       </tr>
                     )})}
                     </tbody>
@@ -91,7 +105,6 @@ export default function Cart() {
                   <button type="submit" name="update" className="update-cart">Cập nhật</button>
                   <button type="submit" name="checkout" className="check-out-cart">Thanh toán</button>
                   </div>
-                </form>
             </div>
         </div>
       </div>

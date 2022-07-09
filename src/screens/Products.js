@@ -6,7 +6,7 @@ import axios from 'axios';
 import { url_api } from '../assets/api';
 import React, {useEffect, useState} from 'react'
 import Header from '../components/header';
-
+import VNDFormat from '../util/Currencyformat';
 
 export default function BestSeller(props) {
   const[data,setData]= useState([]);
@@ -64,8 +64,8 @@ export default function BestSeller(props) {
               <div className='product-desc'>{item.desc}</div>
               <p className='product-text'>{item.title}</p>
               <p className='price'>
-                <span className="new-price">{item.newPrice}</span>
-                <del className="old-price">{item.oldPrice}</del>
+                <span className="new-price">{VNDFormat(item.newPrice)}</span>
+                <del className="old-price">{VNDFormat(item.oldPrice)}</del>
               </p> 
               </div>
               </Link>
