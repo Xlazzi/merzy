@@ -20,8 +20,7 @@ const changeQuantity=(type,item)=>{
     }
 }
 
-
-  // const delCart = (item) => { dispatch({ type: "DELETE_CART", data: item }); }
+  
   const delCart =(item)=> () => {
     dispatch({
       type: "DELETE_CART", 
@@ -102,7 +101,7 @@ const changeQuantity=(type,item)=>{
                     </tbody>
                   </table>
                   <div className='cart_button'>
-                  <button type="submit" name="update" className="update-cart">Cập nhật</button>
+                  <button  type="submit" name="update" className="update-cart">Cập nhật</button>
                   <button type="submit" name="checkout" className="check-out-cart">Thanh toán</button>
                   </div>
             </div>
